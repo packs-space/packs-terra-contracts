@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InstantiateMsg",
+  "type": "object",
+  "required": [
+    "gov_module",
+    "group_module",
+    "name"
+  ],
+  "properties": {
+    "gov_module": {
+      "$ref": "#/definitions/ModuleInstantiateMsg"
+    },
+    "group_module": {
+      "$ref": "#/definitions/ModuleInstantiateMsg"
+    },
+    "logo": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metadata": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "Binary": {
+      "description": "Binary is a wrapper around Vec<u8> to add base64 de/serialization with serde. It also adds some helper methods to help encode inline.\n\nThis is only needed as serde-json-{core,wasm} has a horrible encoding for Vec<u8>",
+      "type": "string"
+    },
+    "ModuleInstantiateMsg": {
+      "type": "object",
+      "required": [
+        "code_id",
+        "msg"
+      ],
+      "properties": {
+        "code_id": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "msg": {
+          "$ref": "#/definitions/Binary"
+        }
+      }
+    }
+  }
+}

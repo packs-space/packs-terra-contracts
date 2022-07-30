@@ -1,0 +1,23 @@
+[workspace]
+members = ["contracts/*", "packages/*"]
+
+[profile.release.package.packs-dao]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.packs-dao-factory]
+codegen-units = 1
+incremental = false
+
+[profile.release.package.the-game]
+codegen-units = 1
+incremental = false
+
+[profile.release]
+rpath = false
+lto = true
+overflow-checks = true
+opt-level = 3
+debug = false
+debug-assertions = false
+panic = 'abort'

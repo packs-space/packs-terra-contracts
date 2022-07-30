@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConfigResponse",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "gov_contract_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "group_contract_address": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "logo": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metadata": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

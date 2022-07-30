@@ -1,0 +1,15 @@
+[package]
+name = "packs"
+version = "0.1.0"
+authors = ["Packs Team <team@packs.space>"]
+edition = "2018"
+
+[dependencies]
+cosmwasm-std = "1.0.0"
+schemars = "0.8.8"
+serde = { version = "1.0.137", default-features = false, features = ["derive"] }
+cw-core-macros = { version = "0.1.0", path = "../cw-core-macros" }
+cw20 = { version = "0.13.2" }
+
+[dev-dependencies]
+cosmwasm-schema = "1.0.0"
